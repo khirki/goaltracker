@@ -1,0 +1,13 @@
+#menu-list{
+    border-bottom: 1px solid white;
+    padding: 0px 10px 10px 10px;
+    a{
+        color: white;
+        font-size: 30px;
+        transition: 0.3s;
+        padding: 25px;
+    }
+    a:hover{
+        color: #a5d6a7;
+    }
+}

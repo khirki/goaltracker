@@ -1,0 +1,26 @@
+<div class="container" id="home-container">
+  <div class="row">
+    <div class="col s6">
+      <p class="section-title">Add a goal</p>
+    </div>
+    <div class="col s6">
+      <p class="section-title">Your goals ({{itemsCount}})</p>
+    </div>
+    <div class="col s6">
+      <p>Use this form to add a new goal</p>
+      <form>
+        <input type="text" name="item" placeholder="Goal name..." [(ngModel)]="goalText">
+        <input type="submit" class="btn" value="Add item" (click)="addItem()">
+      </form>
+    </div>
+    <div class="col s6">
+      <div class="life-container">
+        <ol>
+          <div *ngFor="let goal of goals">
+            <li>{{goal}}</li>
+          </div>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
