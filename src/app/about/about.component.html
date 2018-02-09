@@ -1,7 +1,15 @@
-<p>
-  This is the 'about me' page.
-</p>
-
-<ol>
-  <li *ngFor="let goal of goals">{{goal}}</li>
-</ol>
+<div class="container">
+  <div class="row">
+    <div class="col s6">
+      <p>
+        This is the 'about me' page.
+      </p>
+    </div>
+    <div class="col s6">
+      <button class="btn" (click)="toggleShowGoals()">{{ showGoalsButtonText }}</button>
+      <ol *ngIf="goalsShown">
+        <li *ngFor="let goal of goals">{{goal}}</li>
+      </ol>
+    </div>
+  </div>
+</div>
