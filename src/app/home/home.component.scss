@@ -17,3 +17,8 @@ input[type=text]:not(.browser-default):focus:not([readonly]){
     font-weight: 700;
     font-size: 20px;
 }
+input[type=submit].btn:disabled,
+input[type=submit].btn[disabled]{
+    background-color: #007305 !important;
+    color: white !important;
+}

@@ -10,7 +10,7 @@
       <p>Use this form to add a new goal</p>
       <form>
         <input type="text" name="item" placeholder="Goal name..." [(ngModel)]="goalText">
-        <input type="submit" class="btn" value="Add item" (click)="addItem()">
+        <input type="submit" class="btn" value="Add item" (click)="addItem()" [disabled]="!goalText">
       </form>
     </div>
     <div class="col s6">
