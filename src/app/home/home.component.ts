@@ -31,7 +31,7 @@ import { DataService } from '../data.service';
 export class HomeComponent implements OnInit {
 
   itemsCount: number;
-  goalText: string = "My first goal";
+  goalText: string = "Learn japanese";
   goals = [];
   goalCreated = false;
   goalRemoved = false;

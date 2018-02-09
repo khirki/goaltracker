@@ -22,3 +22,8 @@ input[type=submit].btn[disabled]{
     background-color: #007305 !important;
     color: white !important;
 }
+.life-container span{
+    color: darkred;
+    font-weight: 700;
+    cursor: pointer;
+}
