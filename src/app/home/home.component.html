@@ -16,15 +16,13 @@
     <div class="col s6">
       <div class="life-container">
         <ol>
-          <div *ngFor="let goal of goals, let i=index" (click)="removeItem(i)">
-            <li>{{goal}}</li>
-          </div>
+          <li *ngFor="let goal of goals, let i=index" (click)="removeItem(i)">{{goal}}</li>
         </ol>
       </div>
     </div>
     <div class="col s12">
-      <app-alert-success></app-alert-success>
-      <app-alert-error></app-alert-error>
+      <app-alert-success *ngIf="goalCreated"></app-alert-success>
+      <app-alert-error *ngIf="goalRemoved"></app-alert-error>
     </div>
   </div>
 </div>

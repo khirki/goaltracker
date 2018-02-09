@@ -33,6 +33,8 @@ export class HomeComponent implements OnInit {
   itemsCount: number;
   goalText: string = "My first goal";
   goals = [];
+  goalCreated = false;
+  goalRemoved = false;
 
   constructor(private _data: DataService) { }
 
@@ -43,16 +45,20 @@ export class HomeComponent implements OnInit {
   }
 
   addItem() {
+    this.goalRemoved = false;
     this.goals.push(this.goalText);
     this.goalText = '';
     this.itemsCount = this.goals.length;
     this._data.changeGoal(this.goals);
+    this.goalCreated = true;
   }
 
   removeItem(i){
+    this.goalCreated = false;
     this.goals.splice(i, 1);
     this.itemsCount = this.goals.length;
     this._data.changeGoal(this.goals);
+    this.goalRemoved = true;
   }
 
 }
